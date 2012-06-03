@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>microblog</title>
+</head>
+<body>
+	<form action="/dashboard/post/" method="post">{% csrf_token %}
+		<input name="post" type="text" /></br>
+		<input value="Post" type="submit" />
+	</form>
+	<hr>
+	{% for post in posts %}
+		<p>{{ post.content }}</p>
+		<p>{{ post.timestamp }}</p>
+		<hr>
+	{% endfor %}
+</body>
+</html>

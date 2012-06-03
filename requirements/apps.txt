@@ -1,0 +1,4 @@
+django
+MySql-python
+south
+fabric
